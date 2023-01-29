@@ -21,9 +21,15 @@ class Poster1 extends Phaser.Scene
         this.load.image('preview1','assets/Poster-01/preview1.png');
         this.load.image('trigger','assets/trigger.png');
         this.load.image('bk','assets/Background_2.png');
+        this.load.audio('bgm','assets/background.mp3');
     }
     create()
     {
+        pc=1;
+        bgm=this.sound.add('bgm');
+        bgm.setLoop(true);
+        bgm.play();
+        p=0;
         this.add.image(700,400,'bk');
         this.add.image(200,650,'preview1').setScale(0.2);
         for (var i = 0; i < 12; i++) {
@@ -48,18 +54,26 @@ class Poster1 extends Phaser.Scene
                 p++;
             }
         }
-        for(var i=0;i<12;i++){
-            
-        }
     }
     update()
     {
+        var pck=0;
         for(var i=0;i<12;i++){
             if(this.checkOverlap(triggerManager[i],pieceManager[i])){
                 pieceManager[i].x=triggerManager[i].x;
                 pieceManager[i].y=triggerManager[i].y;
+                triggerManager[i].setAlpha(0);
                 pieceManager[i].setInteractable=false;
+                pck++;
             }
+        }
+        if(pck==12){
+            this.time.addEvent({
+                delay: 2000,
+                callback: ()=> {this.scene.switch('congrats');},
+                callbackScope: this,
+                loop: false
+            }); 
         }
     }
     checkOverlap(spriteA, spriteB) {

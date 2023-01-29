@@ -8,9 +8,12 @@ var config={
           debug: false
       }
   },
-  scene:[Poster1],
+  scene:[start,congrats,Menu,Poster1,Poster2,Poster3],
 };
 
 var pieceManager=[];
 var triggerManager=[];
+var p=0;
+var pc=0;
+var bgm;
 var game = new Phaser.Game(config);
