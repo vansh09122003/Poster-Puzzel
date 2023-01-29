@@ -8,7 +8,7 @@ var config={
           debug: false
       }
   },
-  scene:[Poster3],
+  scene:[Poster1],
 };
 
 var pieceManager=[];

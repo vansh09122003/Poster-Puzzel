@@ -6,19 +6,19 @@ class Poster1 extends Phaser.Scene
     }
     preload()
     {
-        this.load.image('piece1','assets/piece1.jpeg');
-        this.load.image('piece2','assets/piece2.jpeg');
-        this.load.image('piece3','assets/piece3.jpeg');
-        this.load.image('piece4','assets/piece4.jpeg');
-        this.load.image('piece5','assets/piece5.jpeg');
-        this.load.image('piece6','assets/piece6.jpeg');
-        this.load.image('piece7','assets/piece7.jpeg');
-        this.load.image('piece8','assets/piece8.jpeg');
-        this.load.image('piece9','assets/piece9.jpeg');
-        this.load.image('piece10','assets/piece10.jpeg');
-        this.load.image('piece11','assets/piece11.jpeg');
-        this.load.image('piece12','assets/piece12.jpeg');
-        this.load.image('preview1','assets/preview1.png');
+        this.load.image('piece1','assets/Poster-01/piece1.jpeg');
+        this.load.image('piece2','assets/Poster-01/piece2.jpeg');
+        this.load.image('piece3','assets/Poster-01/piece3.jpeg');
+        this.load.image('piece4','assets/Poster-01/piece4.jpeg');
+        this.load.image('piece5','assets/Poster-01/piece5.jpeg');
+        this.load.image('piece6','assets/Poster-01/piece6.jpeg');
+        this.load.image('piece7','assets/Poster-01/piece7.jpeg');
+        this.load.image('piece8','assets/Poster-01/piece8.jpeg');
+        this.load.image('piece9','assets/Poster-01/piece9.jpeg');
+        this.load.image('piece10','assets/Poster-01/piece10.jpeg');
+        this.load.image('piece11','assets/Poster-01/piece11.jpeg');
+        this.load.image('piece12','assets/Poster-01/piece12.jpeg');
+        this.load.image('preview1','assets/Poster-01/preview1.png');
         this.load.image('trigger','assets/trigger.png');
         this.load.image('bk','assets/Background_2.png');
     }
